@@ -1,0 +1,15 @@
+
+cd project_folder
+docker build -t img2csv -f Dockerfile .
+----> build docker image
+
+docker run -it --rm -v /Users/chouroukhelaoui/PycharmProjects/image2csv/data/t2.png:/input/t2.png -v /Users/chouroukhelaoui/PycharmProjects/image2csv/data/t2.png:/input/t1.png -v /Users/chouroukhelaoui/PycharmProjects/image2csv/outputFolder:/output/outputFolder img2csv bash
+----> volumes
+
+python3 image2csv.py -i /input/data/output4.png -p /output/outputFolder/
+--->run the code
+
+to execute coorectly add -l eng and delete oem 0  from tesseract config
+
+
+
